@@ -84,6 +84,26 @@ section {
     border-radius: 8px;
 }
 
+/*middle section li arrows*/
+.section-middle li {
+    font-size: 1em;
+    line-height: 1.5;
+    background-color: rgba(255, 255, 255, 0.623); /* blanco translúcido */
+    padding: 8px;
+    border-radius: 8px;
+    list-style: none; /* quita las bolitas predeterminadas */
+    position: relative;
+    padding-left: 24px; /* espacio para la flecha */
+}
+
+.section-middle li::before {
+    content: "➤"; /* puedes usar "→", "►", "➔", etc. */
+    position: absolute;
+    left: 8px;
+    color: #333; /* o el color que combine con tu diseño */
+    font-size: 1em;
+}
+
 .section-bottom {
     flex: 0 0 auto;
 }
@@ -130,7 +150,7 @@ footer {
     padding: 20px;
 }
 a {
-    color: #1d4ed8;
+    color: #091024;
     text-decoration: none;
 }
 a:hover {
@@ -167,8 +187,8 @@ a:hover {
 }
 .experience-item {
     background-color: #ffffff;
-    padding: 15px 20px;
-    margin-bottom: 15px;
+    padding: 10px 25px;
+    margin-bottom: 10px;
     border-left: 5px solid #1f2937;
     border-radius: 5px;
 }
@@ -177,7 +197,7 @@ a:hover {
 }
 
 
-/*HOVER IMAGE WITH LINK*/
+/*HOVER IMAGE WITH LINK - reusable */
 .hover-image-link {
     position: relative;
     display: inline-block;
