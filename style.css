@@ -40,7 +40,7 @@ header h1 {
 }
 header p {
   font-size: 1.2em;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 section {
   padding: 40px 20px;
@@ -242,4 +242,63 @@ a:hover {
 
 .hover-image-link:hover .hover-img {
   display: block;
+}
+
+
+
+
+
+/* for cellphones */
+
+@media (max-width: 500px) {
+
+    @media (max-width: 500px) {
+  .structured-section {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 40px 10px;
+  }
+
+  .header-con-imagen {
+    padding-top: 20px;
+    gap: 10px;
+  }
+
+  header p {
+    margin-top: 5px;
+  }
+
+  .section-top {
+    padding: 10px;
+  }
+
+  .section-middle {
+    padding: 20px 10px;
+  }
+
+  .section-middle p,
+  .section-middle li {
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  .imgFondo-EscudoUnal::before {
+    top: 15%;
+    z-index: 0;
+  }
+
+  .escudo-unal {
+    width: 80px;
+    margin-top: 10px;
+  }
+
+  .hover-image-link .hover-img {
+    top: 25%;
+    left: 30%;
+    width: 200px;
+  }
+}
+
 }
