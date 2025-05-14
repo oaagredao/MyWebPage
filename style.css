@@ -52,14 +52,16 @@ section {
     justify-content: center;
 }
 
+
 .structured-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* cambia a fila horizontal */
     justify-content: space-between;
     height: 100vh;
-    padding: 40px 20px;
+    padding: 0; 
     box-sizing: border-box;
 }
+
 
 .section-top,
 .section-middle,
@@ -68,12 +70,23 @@ section {
 }
 
 .section-top {
-    flex: 0 0 auto;
+    flex: 0 0 20%; /* fija el ancho al 20% */
+    padding: 20px;
+    background-color: #f3f4f6; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    box-sizing: border-box;
 }
 
 .section-middle {
-    flex: 1 1 auto; 
+    flex: 1; 
+    padding: 40px 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
 }
+
 
 .section-middle p,
 .section-middle li {
@@ -103,6 +116,12 @@ section {
     color: #333; /* o el color que combine con tu diseño */
     font-size: 1em;
 }
+
+/*Section middle for experience items*/
+
+
+
+
 
 .section-bottom {
     flex: 0 0 auto;
@@ -205,12 +224,12 @@ a:hover {
 
 .hover-image-link .hover-img {
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translateY(-50%) translateX(20px); /* desplaza a la derecha del enlace */
-    z-index: 10;
-    width: 400px; /* más grande */
+    position: fixed; /* posicionar relativo a la ventana */
+    top: 45%;       /* Mitad de pantalla */
+    left: 50%;        /* Mitad de pantalla */
+    transform: translateX(-50%); /* Centrado respecto a sí misma */
+    z-index: 1000;
+    width: 400px;
     max-width: 90vw;
     padding: 10px;
     background: white;
